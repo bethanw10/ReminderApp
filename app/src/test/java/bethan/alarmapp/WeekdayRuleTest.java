@@ -2,6 +2,7 @@ package bethan.alarmapp;
 
 import org.junit.Test;
 import org.threeten.bp.DayOfWeek;
+import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 import org.threeten.bp.Month;
 
@@ -15,13 +16,11 @@ public class WeekdayRuleTest {
     public void isTrueForDate() {
         WeekdayRule rule = new WeekdayRule(Arrays.asList(DayOfWeek.MONDAY));
 
-        LocalDateTime mondayDate =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 12,
-                0, 0, 0);
+        LocalDate mondayDate =  LocalDate.of(
+                2018, Month.NOVEMBER, 12);
 
-        LocalDateTime tuesdayDate =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 13,
-                0, 0, 0);
+        LocalDate tuesdayDate =  LocalDate.of(
+                2018, Month.NOVEMBER, 13);
 
         assertTrue(rule.isTrueForDate(mondayDate));
         assertFalse(rule.isTrueForDate(tuesdayDate));

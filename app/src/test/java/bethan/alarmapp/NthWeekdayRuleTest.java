@@ -2,6 +2,7 @@ package bethan.alarmapp;
 
 import org.junit.Test;
 import org.threeten.bp.DayOfWeek;
+import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 import org.threeten.bp.Month;
 
@@ -15,17 +16,14 @@ public class NthWeekdayRuleTest {
     public void isTrueForDate_first() {
         NthWeekdayRule rule = new NthWeekdayRule(DayOfWeek.THURSDAY, 1);
 
-        LocalDateTime firstThursday =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 1,
-                0, 0, 0);
+        LocalDate firstThursday =  LocalDate.of(
+                2018, Month.NOVEMBER, 1);
 
-        LocalDateTime secondThursday =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 8,
-                0, 0, 0);
+        LocalDate secondThursday =  LocalDate.of(
+                2018, Month.NOVEMBER, 8);
 
-        LocalDateTime firstFriday =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 16,
-                0, 0, 0);
+        LocalDate firstFriday =  LocalDate.of(
+                2018, Month.NOVEMBER, 16);
 
         assertTrue(rule.isTrueForDate(firstThursday));
         assertFalse(rule.isTrueForDate(secondThursday));
@@ -36,17 +34,14 @@ public class NthWeekdayRuleTest {
     public void isTrueForDate_last() {
         NthWeekdayRule rule = new NthWeekdayRule(DayOfWeek.FRIDAY, 5);
 
-        LocalDateTime fifthFriday=  LocalDateTime.of(
-                2018, Month.NOVEMBER, 30,
-                0, 0, 0);
+        LocalDate fifthFriday=  LocalDate.of(
+                2018, Month.NOVEMBER, 30);
 
-        LocalDateTime fourthFriday =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 23,
-                0, 0, 0);
+        LocalDate fourthFriday =  LocalDate.of(
+                2018, Month.NOVEMBER, 23);
 
-        LocalDateTime fourthMonday =  LocalDateTime.of(
-                2018, Month.NOVEMBER, 26,
-                0, 0, 0);
+        LocalDate fourthMonday =  LocalDate.of(
+                2018, Month.NOVEMBER, 26);
 
         assertTrue(rule.isTrueForDate(fifthFriday));
         assertFalse(rule.isTrueForDate(fourthFriday));

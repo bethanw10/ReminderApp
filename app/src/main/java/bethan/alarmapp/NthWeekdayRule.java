@@ -1,6 +1,7 @@
 package bethan.alarmapp;
 
 import org.threeten.bp.DayOfWeek;
+import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 
 // n can be between 1 - 5
@@ -15,7 +16,7 @@ public class NthWeekdayRule extends Rule {
     }
 
     @Override
-    public boolean isTrueForDate(LocalDateTime date) {
+    public boolean isTrueForDate(LocalDate date) {
         if (date.getDayOfWeek() == dayOfWeek) {
             int dateWeekNumber = ((date.getDayOfMonth() - 1) / 7) + 1;
 

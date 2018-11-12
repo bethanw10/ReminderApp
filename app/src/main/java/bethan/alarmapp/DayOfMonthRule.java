@@ -1,5 +1,6 @@
 package bethan.alarmapp;
 
+import org.threeten.bp.LocalDate;
 import org.threeten.bp.LocalDateTime;
 
 import java.util.List;
@@ -12,7 +13,7 @@ public class DayOfMonthRule extends Rule {
         this.days = days;
     }
 
-    public boolean isTrueForDate(LocalDateTime date) {
+    public boolean isTrueForDate(LocalDate date) {
         return days.contains(date.getDayOfMonth());
     }
 }

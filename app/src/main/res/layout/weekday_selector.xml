@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ToggleButton
+        android:id="@+id/mondayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Mon"
+        android:textAllCaps="false"
+        android:textOff="Mon"
+        android:textOn="Mon"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/tuesdayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Tue"
+        android:textAllCaps="false"
+        android:textOff="Tue"
+        android:textOn="Tue"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/wednesdayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Wed"
+        android:textAllCaps="false"
+        android:textOff="Wed"
+        android:textOn="Wed"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/thursdayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Thu"
+        android:textAllCaps="false"
+        android:textOff="Thu"
+        android:textOn="Thu"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/fridayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Fri"
+        android:textAllCaps="false"
+        android:textOff="Fri"
+        android:textOn="Fri"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/saturdayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Sat"
+        android:textAllCaps="false"
+        android:textOff="Sat"
+        android:textOn="Sat"
+        android:typeface="normal" />
+
+    <ToggleButton
+        android:id="@+id/sundayBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/round_button"
+        android:checked="false"
+        android:text="Sun"
+        android:textAllCaps="false"
+        android:textOff="Sun"
+        android:textOn="Sun"
+        android:typeface="normal" />
+</LinearLayout>

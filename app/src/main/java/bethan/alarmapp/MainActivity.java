@@ -2,10 +2,8 @@ package bethan.alarmapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Switch;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
@@ -20,10 +18,9 @@ import java.util.List;
 // TODO: Butter knife?
 public class MainActivity extends AppCompatActivity {
 
-    MaterialCalendarView calendar;
+    WeekdaySelector weekdaySelector;
 
-    Switch mondaySwitch, tuesdaySwitch, wednesdaySwitch, thursdaySwitch, fridaySwitch,
-            saturdaySwitch, sundaySwitch;
+    MaterialCalendarView calendar;
 
     Button saveBtn;
 
@@ -58,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<DayOfWeek> daysOfWeek = getSelectedDayOfWeeks();
+                List<DayOfWeek> daysOfWeek = weekdaySelector.getSelectedDays();
 
                 weekdayRule = new WeekdayRule(daysOfWeek);
                 updateCalendar(weekdayRule);
@@ -84,31 +81,9 @@ public class MainActivity extends AppCompatActivity {
         setDatesSelected(calendar, datesToSelect);
     }
 
-    private List<DayOfWeek> getSelectedDayOfWeeks() {
-        List<DayOfWeek> daysOfWeek = new ArrayList<>();
-
-        if (mondaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.MONDAY);
-        if (tuesdaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.TUESDAY);
-        if (wednesdaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.WEDNESDAY);
-        if (thursdaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.THURSDAY);
-        if (fridaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.FRIDAY);
-        if (saturdaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.SATURDAY);
-        if (sundaySwitch.isChecked()) daysOfWeek.add(DayOfWeek.SUNDAY);
-
-        return daysOfWeek;
-    }
-
     private void getViews() {
+        weekdaySelector = findViewById(R.id.weekdaySelector);
         calendar = findViewById(R.id.calendarView);
-
-        mondaySwitch = findViewById(R.id.mondaySwitch);
-        tuesdaySwitch = findViewById(R.id.tuesdaySwitch);
-        wednesdaySwitch = findViewById(R.id.wednesdaySwitch);
-        thursdaySwitch = findViewById(R.id.thursdaySwitch);
-        fridaySwitch = findViewById(R.id.fridaySwitch);
-        saturdaySwitch = findViewById(R.id.saturdaySwitch);
-        sundaySwitch = findViewById(R.id.sundaySwitch);
-
         saveBtn = findViewById(R.id.saveBtn);
     }
 

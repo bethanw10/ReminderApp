@@ -7,15 +7,20 @@
         android:id="@+id/mondayBtn"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Mon"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Mon"
         android:textOn="Mon"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -24,13 +29,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Tue"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Tue"
         android:textOn="Tue"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -39,13 +49,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Wed"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Wed"
         android:textOn="Wed"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -54,13 +69,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Thu"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Thu"
         android:textOn="Thu"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -69,13 +89,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Fri"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Fri"
         android:textOn="Fri"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -84,13 +109,18 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Sat"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Sat"
         android:textOn="Sat"
+        android:textStyle="bold"
         android:typeface="normal" />
 
     <ToggleButton
@@ -99,12 +129,19 @@
         android:layout_height="40dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
         android:layout_weight="1"
         android:background="@drawable/round_button"
         android:checked="false"
+        android:fontFamily="@font/caviar_dreams"
         android:text="Sun"
         android:textAllCaps="false"
+        android:textColor="@color/round_button_text_color"
         android:textOff="Sun"
         android:textOn="Sun"
+        android:textStyle="bold"
         android:typeface="normal" />
 </LinearLayout>

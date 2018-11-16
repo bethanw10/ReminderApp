@@ -12,7 +12,7 @@ import org.threeten.bp.DayOfWeek;
 import java.util.ArrayList;
 import java.util.List;
 
-import static android.widget.CompoundButton.*;
+import static android.widget.CompoundButton.OnCheckedChangeListener;
 
 // TODO: Custom attributes
 public class WeekdaySelector extends LinearLayout {

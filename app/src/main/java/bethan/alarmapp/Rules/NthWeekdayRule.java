@@ -1,8 +1,7 @@
-package bethan.alarmapp;
+package bethan.alarmapp.Rules;
 
 import org.threeten.bp.DayOfWeek;
 import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
 
 // n can be between 1 - 5
 public class NthWeekdayRule extends Rule {
@@ -10,7 +9,7 @@ public class NthWeekdayRule extends Rule {
     private DayOfWeek dayOfWeek;
     private Integer weekNumber;
 
-    NthWeekdayRule(DayOfWeek dayOfWeek, Integer weekNumber) {
+    public NthWeekdayRule(DayOfWeek dayOfWeek, Integer weekNumber) {
         this.dayOfWeek = dayOfWeek;
         this.weekNumber = weekNumber;
     }

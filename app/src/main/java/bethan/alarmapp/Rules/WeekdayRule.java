@@ -1,16 +1,20 @@
-package bethan.alarmapp;
+package bethan.alarmapp.Rules;
 
 import org.threeten.bp.DayOfWeek;
 import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WeekdayRule extends Rule {
 
     private List<DayOfWeek> weekdays;
 
-    WeekdayRule(List<DayOfWeek> onDays) {
+    public WeekdayRule() {
+        this.weekdays = new ArrayList<DayOfWeek>();
+    }
+
+    public WeekdayRule(List<DayOfWeek> onDays) {
         this.weekdays = onDays;
     }
 

@@ -1,7 +1,6 @@
-package bethan.alarmapp;
+package bethan.alarmapp.Rules;
 
 import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
 
 import java.util.List;
 

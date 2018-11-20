@@ -3,12 +3,12 @@ package bethan.alarmapp;
 import org.junit.Test;
 import org.threeten.bp.DayOfWeek;
 import org.threeten.bp.LocalDate;
-import org.threeten.bp.LocalDateTime;
 import org.threeten.bp.Month;
 
-import java.util.Arrays;
+import bethan.alarmapp.Rules.NthWeekdayRule;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class NthWeekdayRuleTest {
 

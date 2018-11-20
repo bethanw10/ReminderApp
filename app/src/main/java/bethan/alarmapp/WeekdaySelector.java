@@ -77,7 +77,7 @@ public class WeekdaySelector extends LinearLayout {
         mOnWeekdaySelected = eventListener;
     }
 
-    private interface onWeekdaySelectedListener {
+    public interface onWeekdaySelectedListener {
         void onWeekdaySelected(CompoundButton buttonView, boolean isChecked);
     }
 }

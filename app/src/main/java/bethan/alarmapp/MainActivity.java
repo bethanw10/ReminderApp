@@ -1,11 +1,10 @@
 package bethan.alarmapp;
 
 import android.app.AlertDialog;
-import android.app.DatePickerDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -25,7 +24,7 @@ import bethan.alarmapp.Rules.RuleSet;
 import bethan.alarmapp.Rules.WeekdayRule;
 
 // TODO: Butter knife?
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends FragmentActivity {
 
     WeekdaySelector weekdaySelector;
 
@@ -78,14 +77,8 @@ public class MainActivity extends AppCompatActivity {
         editDatesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DatePickerDialog datePickerDialog = new DatePickerDialog(
-                        MainActivity.this, null,
-                        LocalDate.now().getYear(),
-                        LocalDate.now().getMonth().getValue(),
-                        LocalDate.now().getDayOfMonth());
-
-                datePickerDialog.show();
+                MultipleDatePickerDialog dialog = new MultipleDatePickerDialog();
+                dialog.show(getSupportFragmentManager(), "MultipleDatePickerDialog");
             }
         });
     }
@@ -128,10 +121,16 @@ public class MainActivity extends AppCompatActivity {
         // Get the layout inflater
         LayoutInflater inflater = this.getLayoutInflater();
 
+        MaterialCalendarView calenderPicker = findViewById(R.id.datePicker);
+        calenderPicker.state().edit()
+                .setMinimumDate(CalendarDay.today())
+                .commit();
+
+        calenderPicker.setSelectionMode(MaterialCalendarView.SELECTION_MODE_MULTIPLE);
+
         // Inflate and set the layout for the dialog
         // Pass null as the parent view because its going in the dialog layout
         builder.setView(inflater.inflate(R.layout.multiple_date_picker_dialog, null))
-                // Add action buttons
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
@@ -140,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
+                        finish();
                     }
                 });
         return builder.create();

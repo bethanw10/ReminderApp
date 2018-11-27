@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Reminders</string>
+    <string name="cancel_button_x">✕</string>
 </resources>

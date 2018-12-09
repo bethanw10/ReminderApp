@@ -2,6 +2,7 @@ package bethan.alarmapp;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,6 +29,20 @@ public class MultipleDatePickerDialog extends DialogFragment {
         void onDialogPositiveClick(DialogFragment dialog, List<CalendarDay> selectedDates);
     }
 
+    // Override the Fragment.onAttach() method to instantiate the NoticeDialogListener
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            // Instantiate the NoticeDialogListener so we can send events to the host
+            mListener = (MultipleDatePickerListener) context;
+        } catch (ClassCastException e) {
+            // The activity doesn't implement the interface, throw exception
+            throw new ClassCastException(getActivity().toString()
+                    + " must implement NoticeDialogListener");
+        }
+    }
+
     // TODO Button colour?
     @NonNull
     @Override
@@ -44,7 +59,8 @@ public class MultipleDatePickerDialog extends DialogFragment {
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int id) {
-                        // sign in the user ...
+                        mListener.onDialogPositiveClick(MultipleDatePickerDialog.this,
+                                calenderPicker.getSelectedDates());
                     }
                 })
                 .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

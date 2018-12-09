@@ -4,11 +4,13 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
@@ -24,7 +26,8 @@ import bethan.alarmapp.Rules.RuleSet;
 import bethan.alarmapp.Rules.WeekdayRule;
 
 // TODO: Butter knife?
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity
+        implements MultipleDatePickerDialog.MultipleDatePickerListener {
 
     WeekdaySelector weekdaySelector;
 
@@ -45,7 +48,6 @@ public class MainActivity extends FragmentActivity {
         getViews();
 
         rulesSet = new RuleSet();
-
         currentMonthStartDate = LocalDate.now();
 
         calendar.state().edit()
@@ -145,6 +147,10 @@ public class MainActivity extends FragmentActivity {
         return builder.create();
     }
 
+    @Override
+    public void onDialogPositiveClick(DialogFragment dialog, List<CalendarDay> selectedDates) {
+        Toast.makeText(this, "ahhh", Toast.LENGTH_LONG).show();
+    }
 }
 
 
